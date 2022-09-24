@@ -56,6 +56,7 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        position: absolute;
 
     }
 
@@ -80,7 +81,6 @@
         margin-top: 45px;
         border-radius: 12px;
 
-
     }
 
  
@@ -88,15 +88,31 @@
 
     @keyframes buttongone {
         0%    { opacity: 1; }
-        20%   { opacity: 0.5; }
-        80%   { opacity: 0.25; }
+        50%   { opacity: 0.5; }
         100%  { opacity: 0; }
       }
 
       .button-spin {
-        animation:buttongone 5s ease-in forwards ;
+        animation:buttongone 3s ease-in forwards ;
       }
-      
+      @keyframes toolatetext {
+        0% {opacity: 0;}
+        99% {opacity: 0;}
+        100% {opacity:1;}
+      }
 
+     
+      
+      .too-late-text {
+        animation:toolatetext 3s ease-out forwards;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        font-size: 25px;
+        color: green;
+        text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+        #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px;
+        position: relative ;
+        top: -1.5cm;
+      }
 
       
